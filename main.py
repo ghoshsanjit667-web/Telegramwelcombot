@@ -1080,4 +1080,8 @@ app.add_handler(CallbackQueryHandler(approval_callback, pattern="approval"))
 app.add_handler(CallbackQueryHandler(locks_callback, pattern="locks"))
 app.add_handler(CallbackQueryHandler(info_callback, pattern="info"))
 
-app.run_polling()
+app.run_webhook(
+    listen="0.0.0.0",
+    port=int(os.environ.get("PORT", 10000)),
+    webhook_url="https://telegramwelcombot-5.onrender.com"
+)
