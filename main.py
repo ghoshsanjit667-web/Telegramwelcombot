@@ -46,8 +46,8 @@ FLOOD_USERS = {}
 FLOOD_LIMIT = 6        # কয়টা message
 FLOOD_SECONDS = 5      # কয় সেকেন্ডের মধ্যে
 FLOOD_MUTE_TIME = 60   # কত সেকেন্ড mute
-TOKEN = "8296862550:AAFA17wkfRZXsJ_ocS-JGEhajNguBmteAr4"
-BOT_USERNAME = "Sathiwelcomebot"   # without @
+BOT_TOKEN = "8731699054:AAHUPBmg2S-BrIJKbxCAyofr-c4ZGRRvvkk"
+BOT_USERNAME = "Sathiwelbot"   # without @
 def admin_only(func):
     async def wrapper(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if update.effective_chat.type not in ["group", "supergroup"]:
