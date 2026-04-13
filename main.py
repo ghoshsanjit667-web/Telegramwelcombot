@@ -1067,5 +1067,5 @@ app.add_handler(CallbackQueryHandler(info_callback, pattern="info"))
 app.run_webhook(
     listen="0.0.0.0",
     port=int(os.environ.get("PORT", 10000)),
-    webhook_url="https://telegramwelcombot-11.onrender.com"
+    webhook_url="https://telegramwelcombot-12.onrender.com"
 )
