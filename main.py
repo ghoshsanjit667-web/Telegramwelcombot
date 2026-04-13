@@ -31,8 +31,6 @@ FLOOD_SECONDS = 5      # কয় সেকেন্ডের মধ্যে
 FLOOD_MUTE_TIME = 60   # কত সেকেন্ড mute
 TOKEN = "8296862550:AAF5EFDKdk5-dv8b1cZhdPoZLs7FZ2AiAS8"
 BOT_USERNAME = "Sathiwelcomebot"   # without @
-START_PHOTO = "sathiwelcome.jpg"
-GROUP_WELCOME_PHOTO = "robotsgswel.jpg"
 def admin_only(func):
     async def wrapper(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if update.effective_chat.type not in ["group", "supergroup"]:
@@ -89,7 +87,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
 
     await update.message.reply_photo(
-        photo=START_PHOTO,
         caption=text,
         parse_mode="Markdown",
         reply_markup=InlineKeyboardMarkup(keyboard)
@@ -135,7 +132,6 @@ async def welcome_new(update: Update, context: ContextTypes.DEFAULT_TYPE):
         caption = caption.replace("{name}", name)
 
         await update.message.reply_photo(
-            photo=open(GROUP_WELCOME_PHOTO, "rb"),
             caption=caption,
             parse_mode="Markdown"
         )
@@ -865,7 +861,6 @@ async def help_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
 
     await update.callback_query.message.reply_photo(
-        photo=START_PHOTO,
         caption=HELP_TEXT,
         parse_mode="Markdown",
         reply_markup=InlineKeyboardMarkup(keyboard)
@@ -892,7 +887,6 @@ async def back_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
 
     await update.callback_query.message.reply_photo(
-        photo=START_PHOTO,
         caption=text,
         parse_mode="Markdown",
         reply_markup=InlineKeyboardMarkup(keyboard)
@@ -917,7 +911,6 @@ async def action_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
 
     await update.callback_query.message.reply_photo(
-        photo=START_PHOTO,
         caption=TEXT,
         parse_mode="Markdown",
         reply_markup=InlineKeyboardMarkup(keyboard)
@@ -936,7 +929,6 @@ async def approval_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [[InlineKeyboardButton("≡ ʙᴧᴄᴋ ≡", callback_data="help")]]
 
     await update.callback_query.message.reply_photo(
-        photo=START_PHOTO,
         caption=TEXT,
         parse_mode="Markdown",
         
@@ -962,7 +954,6 @@ async def locks_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [[InlineKeyboardButton("≡ ʙᴧᴄᴋ ≡", callback_data="help")]]
 
     await update.callback_query.message.reply_photo(
-        photo=START_PHOTO,
         caption=TEXT,
         parse_mode="Markdown",
         
@@ -982,7 +973,6 @@ async def info_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [[InlineKeyboardButton("≡ ʙᴧᴄᴋ ≡", callback_data="help")]]
 
     await update.callback_query.message.reply_photo(
-        photo=START_PHOTO,
         caption=TEXT,
         parse_mode="Markdown",
         
