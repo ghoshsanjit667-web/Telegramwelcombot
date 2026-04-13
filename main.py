@@ -46,7 +46,7 @@ FLOOD_USERS = {}
 FLOOD_LIMIT = 6        # কয়টা message
 FLOOD_SECONDS = 5      # কয় সেকেন্ডের মধ্যে
 FLOOD_MUTE_TIME = 60   # কত সেকেন্ড mute
-TOKEN = "8296862550:AAF5EFDKdk5-dv8b1cZhdPoZLs7FZ2AiAS8"
+TOKEN = "8296862550:AAGjuvRKIucHBo-1G3Dc3BZTp-uDt56hUPU"
 BOT_USERNAME = "Sathiwelcomebot"   # without @
 def admin_only(func):
     async def wrapper(update: Update, context: ContextTypes.DEFAULT_TYPE):
